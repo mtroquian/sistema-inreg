@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block titulo %} Mantenedor {% endblock %}
+
+
+{% block contenido %}
+
+<div class="card">
+   
+    <div class="card-body">
+        <h4 class="card-title">Numeros de Informe</h4>
+        <p class="card-text">Listado de numeros de informes dados</p>
+
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Numero Infome</th>
+                        <th scope="col">Tanque</th>
+                        <th scope="col">Inspeccion Efectuada</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Tomado Por</th>
+                    </tr>
+                </thead>
+
+                {% for a in numeroinforme %}
+                <tbody>
+                    <tr class="">
+                        <td scope="row">{{a.numero_informe}}</td>
+                        <td>{{a.tanque}}</td>
+                        <td>{{a.inspeccion_efectuada}}</td>
+                        <td>{{a.tipo}}</td>
+                        <td>{{a.fecha}}</td>
+                        <td>{{a.tomado_por}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
+{% endblock %},

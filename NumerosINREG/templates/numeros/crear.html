@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block titulo %} Crear {% endblock %}
+
+
+{% block contenido %}
+<div class="card">
+    
+    <div class="card-body">
+        <h4 class="card-title">Datos del numero </h4>
+        {% include 'numeros/form.html'%}
+    </div>
+</div>
+
+{% endblock %}
